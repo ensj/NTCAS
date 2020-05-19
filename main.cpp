@@ -1,11 +1,22 @@
 #include <iostream>
+#include <QCoreApplication>
+#include <QCommandLineParser>
 #include "Mod.h"
 #include "nfunctions.h"
 #include "ptests.h"
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+    a.setApplicationName("NTCAS");
+
+    return a.exec();
+}
+
+
+/*int main()
 {
     cout << "1st prime Fermat number: 3" << endl;
     int count = 2;
@@ -27,4 +38,4 @@ int main()
         }
     }
     return 0;
-}
+}*/
